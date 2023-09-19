@@ -1,0 +1,72 @@
+﻿<Window
+    x:Class="NetworkInfoTool.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Network Information Tool"
+    Height="450"
+    Width="450">
+    <Grid
+        Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="20" />
+            <RowDefinition
+                Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            FontSize="16"
+            FontWeight="Bold"
+            Text="Network Information" />
+        <ComboBox
+            x:Name="cmbNetworkConnections"
+            Grid.Row="1"
+            SelectedIndex="0"
+            SelectionChanged="CmbNetworkConnections_SelectionChanged" />
+        <StackPanel
+            Grid.Row="2"
+            Margin="0,10,0,0">
+            <TextBlock
+                Text="Description:" />
+            <TextBox
+                IsReadOnly="True"
+                x:Name="txtDescription" />
+            <TextBlock
+                Text="Physical Address:" />
+            <TextBox
+                IsReadOnly="True"
+                x:Name="txtPhysicalAddress" />
+            <TextBlock
+                Text="DHCP Enabled:" />
+            <TextBox
+                IsReadOnly="True"
+                x:Name="txtDhcpEnabled" />
+            <TextBlock
+                Text="IPv4 Address:" />
+            <TextBox
+                IsReadOnly="True"
+                x:Name="txtIPv4Address" />
+            <TextBlock
+                Text="IPv4 Subnet Mask:" />
+            <TextBox
+                IsReadOnly="True"
+                x:Name="txtIPv4SubnetMask" />
+            <TextBlock
+                Text="IPv4 Default Gateway:" />
+            <TextBox
+                IsReadOnly="True"
+                x:Name="txtIPv4DefaultGateway" />
+            <TextBlock
+                Text="IPv4 DHCP Server:" />
+            <TextBox
+                IsReadOnly="True"
+                x:Name="txtIPv4DhcpServer" />
+            <TextBlock
+                Text="IPv4 DNS Servers:" />
+            <ListBox
+                x:Name="lstIPv4DnsServers"
+                Height="80" />
+        </StackPanel>
+    </Grid>
+</Window>
